@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="location_request_rationale">A coarse location is necessary. Please grant the permission.</string>
+    <string name="location_request">Coarse location permission required for this feature to be available. Please grant the permission</string>
+    <string name="location_request_action">Request permission</string>
+</resources>

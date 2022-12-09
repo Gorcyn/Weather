@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+./gradlew spotlessCheck --init-script gradle/init.gradle.kts --no-configuration-cache

@@ -1,0 +1,62 @@
+digraph {
+  graph [label="weather\n ",labelloc=t,fontsize=30,ranksep=1.4];
+  node [style=filled, fillcolor="#bbbbbb"];
+  rankdir=TB;
+
+  # Projects
+
+  ":app" [fillcolor="#baffc9"];
+  ":core:common" [fillcolor="#baffc9"];
+  ":core:data" [fillcolor="#baffc9"];
+  ":core:data-test" [fillcolor="#baffc9"];
+  ":core:design" [fillcolor="#baffc9"];
+  ":core:design-test" [fillcolor="#baffc9"];
+  ":core:network" [fillcolor="#baffc9"];
+  ":core:network-test" [fillcolor="#baffc9"];
+  ":core:testing" [fillcolor="#baffc9"];
+  ":feature:home" [fillcolor="#baffc9"];
+  ":feature:locationPermission" [fillcolor="#baffc9"];
+
+  {rank = same;}
+
+  # Dependencies
+
+  ":app" -> ":app"
+  ":app" -> ":core:design" [style=dotted]
+  ":app" -> ":feature:home" [style=dotted]
+  ":app" -> ":feature:locationPermission" [style=dotted]
+  ":core:common" -> ":core:common"
+  ":core:common" -> ":core:testing" [style=dotted]
+  ":core:data" -> ":core:data"
+  ":core:data" -> ":core:common" [style=dotted]
+  ":core:data" -> ":core:network" [style=dotted]
+  ":core:data" -> ":core:testing" [style=dotted]
+  ":core:data" -> ":core:network-test" [style=dotted]
+  ":core:data-test" -> ":core:network-test" [style=dotted, style=dotted]
+  ":core:data-test" -> ":core:data-test"
+  ":core:data-test" -> ":core:data" [style=dotted]
+  ":core:data-test" -> ":core:testing" [style=dotted]
+  ":core:design" -> ":core:design"
+  ":core:design" -> ":core:testing" [style=dotted]
+  ":core:design-test" -> ":core:design-test"
+  ":core:design-test" -> ":core:testing" [style=dotted]
+  ":core:network" -> ":core:network"
+  ":core:network" -> ":core:testing" [style=dotted]
+  ":core:network-test" -> ":core:network-test"
+  ":core:network-test" -> ":core:network" [style=dotted]
+  ":core:network-test" -> ":core:testing" [style=dotted]
+  ":core:testing" -> ":core:testing"
+  ":feature:home" -> ":core:common" [style=dotted, style=dotted]
+  ":feature:home" -> ":core:testing" [style=dotted, style=dotted]
+  ":feature:home" -> ":core:data-test" [style=dotted, style=dotted]
+  ":feature:home" -> ":core:design-test" [style=dotted]
+  ":feature:home" -> ":feature:home"
+  ":feature:home" -> ":core:data" [style=dotted]
+  ":feature:home" -> ":core:design" [style=dotted]
+  ":feature:locationPermission" -> ":core:testing" [style=dotted, style=dotted]
+  ":feature:locationPermission" -> ":feature:locationPermission"
+  ":feature:locationPermission" -> ":core:common" [style=dotted]
+  ":feature:locationPermission" -> ":core:data" [style=dotted]
+  ":feature:locationPermission" -> ":core:design" [style=dotted]
+  ":feature:locationPermission" -> ":core:data-test" [style=dotted]
+}

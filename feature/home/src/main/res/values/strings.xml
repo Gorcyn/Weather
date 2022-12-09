@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_now_title">Weather Now</string>
+    <string name="weather_now_apparent">Apparent</string>
+    <string name="weather_now_wind">Wind</string>
+    <string name="weather_now_precipitation">Precipitation</string>
+    <string name="weather_now_humidity">Humidity</string>
+</resources>

@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "weather"
+include ':app'
+include ':core:common'
+include ':core:data'
+include ':core:design'
+include ':core:network'
+include ':core:network-test'
+include ':core:testing'
+include ':feature:home'
+include ':feature:locationPermission'
+include ':core:data-test'
+include ':core:design-test'

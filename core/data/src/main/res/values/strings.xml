@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_now_temperature_format">%1$.0f%2$s</string>
+    <string name="weather_now_apparent_format">%1$.0f%2$s</string>
+    <string name="weather_now_wind_format">%1$.0f %2$s</string>
+    <string name="weather_now_precipitation_format">%1$.0f %2$s</string>
+    <string name="weather_now_humidity_format">%1$.0f%2$s</string>
+</resources>
